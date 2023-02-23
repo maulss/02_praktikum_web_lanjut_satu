@@ -20,26 +20,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
-Route::get('/test', function () {
-    return view('test');
+Route::get('/', function () {
+    return'<h1>Selamat Datang</h1>';
 });
 
-Route::get('/siswa', function () {
-    return "<h1>Saya Siswa</h1>";
+Route::get('/about', function () {
+    return "<h1>Nama : Muhammad Maulana Givari <br> NIM: 2141720141 </h1>";
 });
 
-Route::get('/siswa/{id}', function ($id) {
-    return "<h1>Saya Siswa dengan Absen $id</h1>";
+Route::get('/articles/{id}', function ($id) {
+    return "<h1>Halaman Artikel dengan id $id</h1>";
 });
 
-Route::get('/siswa/{id}/{nama}', function ($id, $nama) {
-    return "<h1>Saya Siswa dengan Absen $id dan $nama </h1>";
-})-> where ('id', '[0-9]+' );
-
-Route::get('/siswa/{id}/{nama}', function ($id, $nama) {
-    echo "<h1>Saya Siswa dengan Absen $id dengan nama  $nama </h1>";
-})-> where (['id'=>'[0-9]+','nama'=>'[A-Za-z]+']);
 
 
     
